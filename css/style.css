@@ -1,0 +1,533 @@
+:root {
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+  --font-ter: "Clicker Script", cursive;
+
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 20px;
+  --fs-xl: 24px;
+  --fs-xxl: 30px;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+}
+body {
+  background-color: #faedcd;
+  font-family: var(--font-primary);
+  font-size: var(--fs-md);
+  color: #3a2e2a;
+  margin: 0;
+}
+#wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: #b08968;
+}
+ul {
+  margin: 0;
+  list-style: none;
+}
+.header-frame {
+  background: #faedcd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 0;
+  z-index: 10;
+}
+.container {
+  max-width: 1214px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mini-container {
+  max-width: 984px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.main-frame {
+  padding: 75px 0 0;
+}
+/* .content {
+  padding: 270px 203px 0;
+} */
+
+/* footer {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+} */
+
+p {
+  font-family: var(--font-secondary);
+  font-weight: var(--fw-regular);
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: var(--font-secondary);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-lg);
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-xxl);
+  margin: 0;
+  padding: 0;
+}
+
+.nav_head {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+.nav_head a {
+  border-right: 1px solid #3a2e2a;
+  padding-right: 20px;
+}
+
+.nav_head,
+button {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-sm);
+}
+.btn {
+  background: #faedcd;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #3a2e2a;
+  cursor: pointer;
+  width: auto;
+  align-self: flex-start;
+}
+.btn:hover {
+  background: #3a2e2a;
+  color: #faedcd;
+}
+
+.fullName {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-extrabold);
+  font-size: var(--fs-xl);
+}
+.position {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-sm);
+}
+
+.main {
+  display: flex;
+}
+
+.home_info h1 {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-bold);
+  font-size: 26px;
+  margin: 0;
+  padding: 0;
+}
+.myName {
+  font-weight: var(--fw-bold);
+  font-family: var(--font-ter);
+  font-size: var(--fs-xxl);
+  letter-spacing: 0.05em;
+}
+.typing {
+  font-weight: var(--fw-bold);
+}
+
+.home_desc {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.home_desc p {
+  width: 70%;
+  line-height: 1.5;
+}
+
+.pp img {
+  border-radius: 5px;
+}
+
+.social-connect {
+  list-style: none;
+  padding: 0 0 160px;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  left: 150px;
+  z-index: 9;
+}
+.social-connect::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 140px;
+  width: 2px;
+  background: #333;
+  z-index: -1;
+  left: 17px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 266px;
+  gap: 50px;
+  padding: 250px 0 0;
+}
+
+.about {
+  margin: 0 0 75px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about_text {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 60%;
+}
+.about_text p {
+  line-height: 2;
+}
+
+.skills {
+  display: grid; /* make main list a grid */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.skills-section h2 {
+  padding: 0 0 25px;
+}
+.skills li::before {
+  content: "\2B27   ";
+}
+
+.projects {
+  margin: 0 0 111px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.projects .works {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.projects .project_details {
+  padding: 40px 47px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  border: 1px solid #3a2e2a;
+  border-radius: 5px;
+  max-width: 47%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(85, 36, 0, 0.3);
+}
+.projects .pro_part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.projects .left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+}
+.project_details .used {
+  display: flex;
+  gap: 18px;
+  background-color: #fff;
+}
+.project_details p,
+.project_details h2,
+.project_details a,
+.project_details img {
+  background-color: #fff;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+}
+.contact_details {
+  display: flex;
+  gap: 37px;
+  flex-direction: column;
+}
+.contact #contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 12px 0 0;
+}
+#contact_form input[type] {
+  width: 490px;
+  height: 40px;
+  padding: 12px 12px 12px 20px;
+  border-radius: 5px;
+}
+#contact_form textarea {
+  padding: 12px 12px 12px 20px;
+  border-radius: 5px;
+  resize: none;
+}
+#contact_form input,
+#contact_form textarea {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-sm);
+}
+
+#contact_form .btn {
+  align-self: flex-end;
+}
+
+#phone,
+#email {
+  font-weight: var(--fw-bold);
+}
+
+.phone,
+.email {
+  display: flex;
+  gap: 6px;
+  flex-direction: column;
+}
+
+.emai,
+.phn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.mediums {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.con_medium {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.other_contact {
+  display: flex;
+  gap: 15px;
+}
+
+.foot_text {
+  font-size: var(--fw-regular);
+  font-weight: var(--fs-sm);
+  padding: 0 0 40px;
+}
+
+footer {
+  padding: 93px 0 0;
+  text-align: center;
+}
+
+.back_top {
+  display: none;
+  position: fixed;
+  bottom: 28px;
+  right: 100px;
+  z-index: 9;
+}
+
+@media (max-width: 1601px) {
+  /* Styles for large desktop screens */
+  .mini-container {
+    width: 80%;
+  }
+
+  .hero {
+    padding-top: 180px;
+  }
+
+  .social-connect {
+    left: 30px;
+  }
+
+  .back_top {
+    right: 20px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* Styles for small laptops */
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Styles for tablets */
+  .mini-container {
+    width: 70%;
+  }
+
+  .nav_head,
+  button {
+    font-size: var(--fs-xs);
+  }
+
+  .pp img {
+    max-height: 220px;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .about_text {
+    width: 100%;
+  }
+
+  #contact_form input[type] {
+    max-width: 400px;
+  }
+
+  .projects .works {
+    gap: 20px;
+  }
+  .projects .project_details {
+    max-width: 100%;
+  }
+
+  .social-connect {
+    left: 45px;
+  }
+
+  .back_top {
+    right: 30px;
+  }
+
+  .contact {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* Make form full width */
+  #contact_form input[type],
+  #contact_form textarea {
+    width: 100%;
+  }
+
+  /* Button full width (optional, looks better on mobile) */
+  #contact_form .btn {
+    align-self: stretch;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Styles for small mobile devices */
+  .hero {
+    padding-top: 157px;
+  }
+  .home_desc p {
+    width: 100%;
+  }
+  .nav_head {
+    gap: 0;
+    padding: 0;
+  }
+  .nav_head li a {
+    display: none;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .about_text {
+    width: 100%;
+  }
+
+  .projects .works {
+    gap: 20px;
+  }
+  .projects .project_details {
+    max-width: 100%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .social-connect {
+    padding: 0;
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  .social-connect::before {
+    position: inherit;
+    width: 0;
+    height: 0;
+  }
+
+  .contact {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* Make form full width */
+  #contact_form input[type],
+  #contact_form textarea {
+    width: 100%;
+  }
+
+  /* Button full width (optional, looks better on mobile) */
+  #contact_form .btn {
+    align-self: stretch;
+    text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  /* Styles for small mobile devices */
+}
